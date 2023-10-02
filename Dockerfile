@@ -1,5 +1,4 @@
-FROM java:8  
-COPY . /var/www/java  
-WORKDIR /var/www/java  
-RUN javac Hello.java  
-CMD ["java", "Hello"]  
+FROM openjdk:8  
+EXPOSE 8080  
+ADD target/webpavanapp-1.0-SNAPSHOT.jar docker-image.jar 
+CMD ["java", "-jar", "/docker-image.jar"]  
