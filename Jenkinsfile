@@ -35,7 +35,7 @@ pipeline {
         stage('latest image of docker') {
             steps {
                 script {
-                 sh '/home/ubuntu/tst.sh $DOCKERHUB_REPO'   
+                 sh './latest-image.sh $DOCKERHUB_REPO'   
                 }
             }
             
