@@ -35,7 +35,7 @@ pipeline {
         stage('latest image of docker') {
             steps {
                 script {
-                 sh './latest-image.sh 8179554905/env-app'   
+                 sh 'docker push 8179554905/env-app:$BUILD_NUMBER'   
                 }
             }
             
